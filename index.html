@@ -366,6 +366,14 @@ For privacy questions or requests, contact us at wearelovelystudio@gmail.com
 
         </div>
     </div>
-
+  <script>
+    function activateTab() {
+      var hash = window.location.hash.substring(1);
+      var el = document.getElementById(hash);
+      if (el && el.type === 'radio') el.checked = true;
+    }
+    window.addEventListener('hashchange', activateTab);
+    activateTab();
+  </script>
 </body>
 </html>
